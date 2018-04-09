@@ -13,6 +13,7 @@ var printDetail = false
 func TestStart(t *testing.T) {
 	// 设置P最大数量
 	runtime.GOMAXPROCS(runtime.NumCPU())
+	t.Logf("CPU number: (%d)", runtime.NumCPU())
 
 	// 初始化服务器
 	server := thelper.NewTcpServer()
